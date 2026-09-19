@@ -1,205 +1,250 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="1200" height="280">
   <defs>
-    <!-- Background Yellow Palette Gradients -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFDE7"/>
-      <stop offset="25%" stop-color="#FFF59D"/>
-      <stop offset="55%" stop-color="#FDD835"/>
-      <stop offset="85%" stop-color="#FBC02D"/>
-      <stop offset="100%" stop-color="#F57F17"/>
+    <!-- Warm Yellow Radial Glow — exactly like the Pinterest reference -->
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="70%" fx="50%" fy="45%">
+      <stop offset="0%"   stop-color="#FFE066" />
+      <stop offset="30%"  stop-color="#FFD740" />
+      <stop offset="60%"  stop-color="#FFE57A" />
+      <stop offset="85%"  stop-color="#FFF8CC" />
+      <stop offset="100%" stop-color="#FFFDE7" />
+    </radialGradient>
+
+    <!-- Secondary warm radial for depth -->
+    <radialGradient id="innerGlow" cx="50%" cy="40%" r="40%">
+      <stop offset="0%"   stop-color="#FFC400" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#FFE57A" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- 3D Chrome/Silver Star gradient — top-lit metallic look -->
+    <linearGradient id="starMetal1" x1="20%" y1="10%" x2="80%" y2="90%">
+      <stop offset="0%"   stop-color="#FFFFFF"/>
+      <stop offset="18%"  stop-color="#E8EDF2"/>
+      <stop offset="38%"  stop-color="#B0BEC5"/>
+      <stop offset="55%"  stop-color="#CFD8DC"/>
+      <stop offset="72%"  stop-color="#8D9BA8"/>
+      <stop offset="88%"  stop-color="#B0BEC5"/>
+      <stop offset="100%" stop-color="#ECEFF1"/>
     </linearGradient>
 
-    <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFEE58" stop-opacity="0.6"/>
-      <stop offset="50%" stop-color="#FDD835" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.5"/>
+    <linearGradient id="starMetal2" x1="15%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%"   stop-color="#F5F5F5"/>
+      <stop offset="25%"  stop-color="#CFD8DC"/>
+      <stop offset="50%"  stop-color="#90A4AE"/>
+      <stop offset="75%"  stop-color="#B0BEC5"/>
+      <stop offset="100%" stop-color="#ECEFF1"/>
     </linearGradient>
 
-    <linearGradient id="waveGrad2" x1="100%" y1="0%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#FFF9C4" stop-opacity="0.7"/>
-      <stop offset="50%" stop-color="#FFEE58" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#FBC02D" stop-opacity="0.6"/>
+    <linearGradient id="starMetal3" x1="30%" y1="5%" x2="70%" y2="95%">
+      <stop offset="0%"   stop-color="#FFFFFF"/>
+      <stop offset="30%"  stop-color="#B0BEC5"/>
+      <stop offset="60%"  stop-color="#78909C"/>
+      <stop offset="100%" stop-color="#CFD8DC"/>
     </linearGradient>
 
-    <!-- Silver Star Shimmer & Gradient -->
-    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="40%" stop-color="#F1F5F9"/>
-      <stop offset="70%" stop-color="#CBD5E1"/>
-      <stop offset="100%" stop-color="#94A3B8"/>
-    </linearGradient>
-
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#3E2723"/>
-      <stop offset="100%" stop-color="#1A0C00"/>
-    </linearGradient>
-
-    <linearGradient id="subtextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4E342E"/>
-      <stop offset="100%" stop-color="#37241E"/>
-    </linearGradient>
-
-    <!-- Star Glow Filters -->
+    <!-- Star drop shadows -->
+    <filter id="starShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#B8860B" flood-opacity="0.28"/>
+    </filter>
+    <filter id="starShadowSm" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#B8860B" flood-opacity="0.22"/>
+    </filter>
     <filter id="starGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="1.5" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
-    <filter id="textShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#CA8A04" flood-opacity="0.35"/>
+    <!-- Text glow -->
+    <filter id="textGlow">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#CA8A04" flood-opacity="0.4"/>
     </filter>
 
-    <filter id="badgeShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#854D0E" flood-opacity="0.25"/>
-    </filter>
+    <!-- 5-point star path centred at 0,0 with outer radius R, inner ratio 0.4 -->
+    <!-- R=38: large star -->
+    <path id="star-lg" d="
+      M 0,-38
+      L 9.05,-12.4  L 36.1,-11.75
+      L 14.62,7.24  L 22.25,35.46
+      L 0,20        L -22.25,35.46
+      L -14.62,7.24 L -36.1,-11.75
+      L -9.05,-12.4 Z"/>
 
-    <!-- 4-Point Silver Star Symbol -->
-    <g id="sparkleStar">
-      <path d="M 0,-10 Q 0,0 10,0 Q 0,0 0,10 Q 0,0 -10,0 Q 0,0 0,-10 Z" fill="url(#silverGrad)" filter="url(#starGlow)"/>
-    </g>
+    <!-- R=22: medium star -->
+    <path id="star-md" d="
+      M 0,-22
+      L 5.24,-7.18  L 20.9,-6.81
+      L 8.47,4.2    L 12.87,20.55
+      L 0,11.59     L -12.87,20.55
+      L -8.47,4.2   L -20.9,-6.81
+      L -5.24,-7.18 Z"/>
 
-    <g id="miniStar">
-      <circle cx="0" cy="0" r="2" fill="url(#silverGrad)" filter="url(#starGlow)"/>
-    </g>
+    <!-- R=13: small star -->
+    <path id="star-sm" d="
+      M 0,-13
+      L 3.1,-4.24   L 12.36,-4.02
+      L 5,-2.49     L 7.61,12.14
+      L 0,6.85      L -7.61,12.14
+      L -5,-2.49    L -12.36,-4.02
+      L -3.1,-4.24 Z"/>
+
+    <!-- R=8: tiny star -->
+    <path id="star-xs" d="
+      M 0,-8
+      L 1.91,-2.61  L 7.61,-2.48
+      L 3.08,1.54   L 4.69,7.47
+      L 0,4.22      L -4.69,7.47
+      L -3.08,1.54  L -7.61,-2.48
+      L -1.91,-2.61 Z"/>
   </defs>
 
   <style>
-    /* Slow Moving & Twinkling Keyframes for Silver Stars */
-    @keyframes slowDrift1 {
-      0% { transform: translate(0px, 0px) scale(0.9); opacity: 0.35; }
-      50% { transform: translate(18px, -12px) scale(1.25); opacity: 0.95; }
-      100% { transform: translate(0px, 0px) scale(0.9); opacity: 0.35; }
+    /* ── Slow Drifting Animations ── */
+    @keyframes drift1 {
+      0%   { transform: translate(0px,   0px)  rotate(0deg)   scale(1);    opacity:0.82; }
+      33%  { transform: translate(14px, -18px) rotate(14deg)  scale(1.08); opacity:1;    }
+      66%  { transform: translate(-8px,  10px) rotate(-8deg)  scale(0.95); opacity:0.75; }
+      100% { transform: translate(0px,   0px)  rotate(0deg)   scale(1);    opacity:0.82; }
+    }
+    @keyframes drift2 {
+      0%   { transform: translate(0px,   0px)  rotate(0deg)   scale(1);    opacity:0.65; }
+      40%  { transform: translate(-18px, 14px) rotate(-20deg) scale(1.12); opacity:0.95; }
+      75%  { transform: translate(10px, -8px)  rotate(10deg)  scale(0.9);  opacity:0.55; }
+      100% { transform: translate(0px,   0px)  rotate(0deg)   scale(1);    opacity:0.65; }
+    }
+    @keyframes drift3 {
+      0%   { transform: translate(0px,  0px)  rotate(0deg)  scale(1);    opacity:0.7; }
+      50%  { transform: translate(20px, 12px) rotate(25deg) scale(1.15); opacity:1;   }
+      100% { transform: translate(0px,  0px)  rotate(0deg)  scale(1);    opacity:0.7; }
+    }
+    @keyframes drift4 {
+      0%   { transform: translate(0px,   0px)  rotate(0deg)   scale(1);    opacity:0.55; }
+      45%  { transform: translate(-12px,-16px) rotate(-18deg) scale(1.1);  opacity:0.9;  }
+      100% { transform: translate(0px,   0px)  rotate(0deg)   scale(1);    opacity:0.55; }
+    }
+    @keyframes drift5 {
+      0%   { transform: translate(0px, 0px)  rotate(0deg)  scale(1);    opacity:0.8; }
+      60%  { transform: translate(16px,-20px) rotate(30deg) scale(1.05); opacity:0.5; }
+      100% { transform: translate(0px, 0px)  rotate(0deg)  scale(1);    opacity:0.8; }
+    }
+    @keyframes twinkle {
+      0%,100% { opacity:0.3; }
+      50%      { opacity:1;   }
     }
 
-    @keyframes slowDrift2 {
-      0% { transform: translate(0px, 0px) scale(1.1); opacity: 0.85; }
-      50% { transform: translate(-20px, 14px) scale(0.8); opacity: 0.25; }
-      100% { transform: translate(0px, 0px) scale(1.1); opacity: 0.85; }
-    }
+    .s1 { animation: drift1 9s  ease-in-out infinite; }
+    .s2 { animation: drift2 12s ease-in-out infinite; }
+    .s3 { animation: drift3 7.5s ease-in-out infinite; }
+    .s4 { animation: drift4 10s ease-in-out infinite; }
+    .s5 { animation: drift5 8.5s ease-in-out infinite; }
+    .tw { animation: twinkle 3s ease-in-out infinite; }
+    .tw2{ animation: twinkle 4.5s ease-in-out infinite 1s; }
+    .tw3{ animation: twinkle 2.5s ease-in-out infinite 0.5s; }
 
-    @keyframes slowDrift3 {
-      0% { transform: translate(0px, 0px) scale(0.85); opacity: 0.4; }
-      50% { transform: translate(14px, 16px) scale(1.3); opacity: 1; }
-      100% { transform: translate(0px, 0px) scale(0.85); opacity: 0.4; }
-    }
-
-    @keyframes waveMove {
-      0% { transform: translateX(0); }
-      50% { transform: translateX(-30px); }
-      100% { transform: translateX(0); }
-    }
-
-    .star-group-1 { animation: slowDrift1 6.5s ease-in-out infinite; }
-    .star-group-2 { animation: slowDrift2 8.5s ease-in-out infinite; }
-    .star-group-3 { animation: slowDrift3 5.5s ease-in-out infinite; }
-    .wave-anim { animation: waveMove 10s ease-in-out infinite; }
-
-    .title-text {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       font-weight: 900;
-      font-size: 64px;
-      letter-spacing: -0.5px;
+      font-size: 72px;
+      letter-spacing: -1px;
+      fill: #3E2000;
     }
-
-    .subtitle-text {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    .sub {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       font-weight: 600;
-      font-size: 19px;
-      letter-spacing: 0.3px;
+      font-size: 17px;
+      letter-spacing: 0.4px;
+      fill: #5D3A00;
     }
-
-    .tag-text {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    .tag {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 1px;
+      font-size: 12px;
+      letter-spacing: 1.8px;
+      fill: #7A4B00;
     }
   </style>
 
-  <!-- Base Curved Banner Container -->
-  <rect width="1200" height="300" rx="20" fill="url(#bgGrad)" />
+  <!-- ── Background: soft yellow radial glow ── -->
+  <rect width="1200" height="280" rx="0" fill="url(#bgGlow)"/>
+  <rect width="1200" height="280" rx="0" fill="url(#innerGlow)"/>
 
-  <!-- Flowing Aesthetic Waves -->
-  <g class="wave-anim">
-    <path d="M 0,220 C 300,160 500,280 800,210 C 1000,160 1150,230 1200,200 L 1200,300 L 0,300 Z" fill="url(#waveGrad1)" />
-    <path d="M 0,250 C 250,210 600,290 850,230 C 1050,190 1150,260 1200,240 L 1200,300 L 0,300 Z" fill="url(#waveGrad2)" />
+  <!-- ── STARS — scattered behind the title ── -->
+
+  <!-- Large star — left cluster -->
+  <g class="s1" style="transform-origin: 120px 130px">
+    <use href="#star-lg" x="120" y="130" fill="url(#starMetal1)" filter="url(#starShadow)"/>
   </g>
 
-  <!-- ================= SILVER STARS MOVING SLOWLY BEHIND TITLE ================= -->
-  
-  <!-- Group 1: 4-Point Sparkles (Slow Drift 1) -->
-  <g class="star-group-1">
-    <use href="#sparkleStar" x="120" y="60" transform="scale(0.85)"/>
-    <use href="#sparkleStar" x="260" y="110" transform="scale(0.7)"/>
-    <use href="#sparkleStar" x="420" y="45" transform="scale(0.9)"/>
-    <use href="#sparkleStar" x="590" y="80" transform="scale(0.65)"/>
-    <use href="#sparkleStar" x="780" y="50" transform="scale(0.85)"/>
-    <use href="#sparkleStar" x="930" y="95" transform="scale(0.75)"/>
-    <use href="#sparkleStar" x="1080" y="55" transform="scale(0.95)"/>
-    <use href="#miniStar" x="180" y="140"/>
-    <use href="#miniStar" x="350" y="90"/>
-    <use href="#miniStar" x="700" y="130"/>
-    <use href="#miniStar" x="860" y="70"/>
-    <use href="#miniStar" x="1020" y="130"/>
+  <!-- Medium star — top left -->
+  <g class="s3" style="transform-origin: 70px 65px">
+    <use href="#star-md" x="70" y="65" fill="url(#starMetal2)" filter="url(#starShadowSm)"/>
   </g>
 
-  <!-- Group 2: Silver Stars (Slow Drift 2) -->
-  <g class="star-group-2">
-    <use href="#sparkleStar" x="190" y="85" transform="scale(0.75)"/>
-    <use href="#sparkleStar" x="330" y="40" transform="scale(0.9)"/>
-    <use href="#sparkleStar" x="500" y="100" transform="scale(0.7)"/>
-    <use href="#sparkleStar" x="680" y="40" transform="scale(0.85)"/>
-    <use href="#sparkleStar" x="840" y="115" transform="scale(0.95)"/>
-    <use href="#sparkleStar" x="1000" y="45" transform="scale(0.8)"/>
-    <use href="#sparkleStar" x="1140" y="100" transform="scale(0.7)"/>
-    <use href="#miniStar" x="90" y="110"/>
-    <use href="#miniStar" x="290" y="150"/>
-    <use href="#miniStar" x="470" y="60"/>
-    <use href="#miniStar" x="630" y="120"/>
-    <use href="#miniStar" x="790" y="150"/>
-    <use href="#miniStar" x="970" y="85"/>
-    <use href="#miniStar" x="1110" y="140"/>
+  <!-- Small star — upper mid-left -->
+  <g class="s2" style="transform-origin: 240px 45px">
+    <use href="#star-sm" x="240" y="45" fill="url(#starMetal1)" filter="url(#starShadowSm)"/>
   </g>
 
-  <!-- Group 3: Silver Micro-Stars & Deep Sparkles (Slow Drift 3) -->
-  <g class="star-group-3">
-    <use href="#sparkleStar" x="80" y="160" transform="scale(0.65)"/>
-    <use href="#sparkleStar" x="220" y="30" transform="scale(0.8)"/>
-    <use href="#sparkleStar" x="380" y="130" transform="scale(0.75)"/>
-    <use href="#sparkleStar" x="540" y="40" transform="scale(0.95)"/>
-    <use href="#sparkleStar" x="730" y="90" transform="scale(0.8)"/>
-    <use href="#sparkleStar" x="890" y="35" transform="scale(0.85)"/>
-    <use href="#sparkleStar" x="1050" y="110" transform="scale(0.7)"/>
-    <use href="#miniStar" x="150" y="70"/>
-    <use href="#miniStar" x="440" y="150"/>
-    <use href="#miniStar" x="600" y="30"/>
-    <use href="#miniStar" x="760" y="110"/>
-    <use href="#miniStar" x="910" y="145"/>
-    <use href="#miniStar" x="1160" y="50"/>
+  <!-- Large star — right side -->
+  <g class="s4" style="transform-origin: 1070px 110px">
+    <use href="#star-lg" x="1070" y="110" fill="url(#starMetal2)" filter="url(#starShadow)"/>
   </g>
 
-  <!-- ================= BANNER TITLE & FOREGROUND CONTENT ================= -->
-
-  <!-- Top Pill Badge -->
-  <g filter="url(#badgeShadow)" transform="translate(600, 52)">
-    <rect x="-140" y="-14" width="280" height="28" rx="14" fill="#FFFDE7" stroke="#FDD835" stroke-width="1.5"/>
-    <text x="0" y="5" text-anchor="middle" fill="#713F12" class="tag-text">✦ SMART PRECISION AGRI-TECH ✦</text>
+  <!-- Medium star — top right -->
+  <g class="s5" style="transform-origin: 1120px 55px">
+    <use href="#star-md" x="1120" y="55" fill="url(#starMetal1)" filter="url(#starShadowSm)"/>
   </g>
+
+  <!-- Small star — bottom left -->
+  <g class="s1" style="transform-origin: 190px 230px">
+    <use href="#star-sm" x="190" y="230" fill="url(#starMetal3)" filter="url(#starShadowSm)"/>
+  </g>
+
+  <!-- Small star — bottom right -->
+  <g class="s2" style="transform-origin: 1010px 220px">
+    <use href="#star-sm" x="1010" y="220" fill="url(#starMetal2)" filter="url(#starShadowSm)"/>
+  </g>
+
+  <!-- Medium star — lower left -->
+  <g class="s3" style="transform-origin: 55px 210px">
+    <use href="#star-md" x="55" y="210" fill="url(#starMetal3)" filter="url(#starShadowSm)"/>
+  </g>
+
+  <!-- Medium star — lower right -->
+  <g class="s4" style="transform-origin: 1150px 190px">
+    <use href="#star-md" x="1150" y="190" fill="url(#starMetal1)" filter="url(#starShadowSm)"/>
+  </g>
+
+  <!-- Tiny accent stars — scattered -->
+  <g class="tw" style="transform-origin: 380px 35px">
+    <use href="#star-xs" x="380" y="35" fill="url(#starMetal2)" filter="url(#starGlow)"/>
+  </g>
+  <g class="tw2" style="transform-origin: 850px 40px">
+    <use href="#star-xs" x="850" y="40" fill="url(#starMetal1)" filter="url(#starGlow)"/>
+  </g>
+  <g class="tw3" style="transform-origin: 310px 240px">
+    <use href="#star-xs" x="310" y="240" fill="url(#starMetal3)" filter="url(#starGlow)"/>
+  </g>
+  <g class="tw" style="transform-origin: 920px 250px">
+    <use href="#star-xs" x="920" y="250" fill="url(#starMetal2)" filter="url(#starGlow)"/>
+  </g>
+  <g class="tw2" style="transform-origin: 600px 30px">
+    <use href="#star-xs" x="600" y="30" fill="url(#starMetal1)" filter="url(#starGlow)"/>
+  </g>
+  <g class="tw3" style="transform-origin: 600px 255px">
+    <use href="#star-xs" x="600" y="255" fill="url(#starMetal2)" filter="url(#starGlow)"/>
+  </g>
+
+  <!-- ── FOREGROUND TEXT ── -->
+
+  <!-- Pill label -->
+  <rect x="430" y="52" width="340" height="26" rx="13" fill="#FFFDE7" fill-opacity="0.8" stroke="#DEB018" stroke-width="1.2"/>
+  <text x="600" y="70" text-anchor="middle" class="tag">✦ SMART PRECISION AGRI-TECH ✦</text>
 
   <!-- Main Title -->
-  <text x="600" y="138" text-anchor="middle" fill="url(#textGrad)" class="title-text" filter="url(#textShadow)">
-    KrishiAI 360
-  </text>
+  <text x="600" y="156" text-anchor="middle" class="title" filter="url(#textGlow)">KrishiAI 360</text>
 
   <!-- Subtitle -->
-  <text x="600" y="182" text-anchor="middle" fill="url(#subtextGrad)" class="subtitle-text">
-    🌾 Smart IoT Sensing &nbsp;·&nbsp; 🧪 NPK AI Intelligence &nbsp;·&nbsp; 🔗 Blockchain Agri-Market
-  </text>
+  <text x="600" y="196" text-anchor="middle" class="sub">🌾 Smart IoT Sensing · 🧪 AI Crop Intelligence · 🔗 Blockchain Agri-Market</text>
 
-  <!-- Bottom Accent Highlight Strip -->
-  <rect x="420" y="212" width="360" height="3" rx="1.5" fill="#CA8A04" opacity="0.6"/>
-
+  <!-- Underline accent -->
+  <rect x="410" y="214" width="380" height="2.5" rx="1.25" fill="#CA8A04" opacity="0.55"/>
 </svg>

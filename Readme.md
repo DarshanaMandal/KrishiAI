@@ -1,7 +1,7 @@
 <div align="center">
 
-<!-- Hero Header with Pure Yellow Gradient & Twinkling Moving Stars Animation -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=FFFDE7,FFF59D,FFEE58,FDD835,FBC02D,F57F17&height=230&section=header&text=KrishiAI%20360&fontSize=68&fontColor=1C1917&animation=twinkling&subtext=%E2%9C%A8%20Smart%20IoT%20Sensing%20%C2%B7%20AI%20Crop%20Intelligence%20%C2%B7%20Blockchain%20Agri-Market%20%E2%9C%A8&subfontSize=18&subfontColor=3E2723" width="100%" alt="KrishiAI 360 Header" />
+<!-- Animated Yellow + Silver Stars Banner (custom SVG) -->
+<img src="./assets/banner.svg" width="100%" alt="KrishiAI 360 — Smart Agri-Tech" />
 
 <br/>
 
