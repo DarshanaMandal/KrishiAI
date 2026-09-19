@@ -1,7 +1,9 @@
 <div align="center">
 
-<!-- Hero Header with Pure Yellow / Lemon & Butter Yellow Gradient -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=fffde7,fff59d,ffee58,fdd835,fbc02d&height=220&section=header&text=KrishiAI%20360&fontSize=68&fontColor=212121&animation=fadeIn&subtext=Smart%20IoT%20Sensing%20%7C%20AI%20Crop%20Intelligence%20%7C%20Blockchain%20Agri-Market&subfontSize=18&subfontColor=424242" width="100%" alt="KrishiAI 360 Header" />
+<!-- Aesthetic Custom Animated Banner: Pure Yellow Palette with Slowly Moving Silver Stars -->
+<a href="https://github.com/DarshanaMandal/KrishiAI">
+  <img src="./assets/banner.svg" width="100%" alt="KrishiAI 360 - Smart Agri-Tech" />
+</a>
 
 <br/>
 
@@ -191,6 +193,9 @@ flowchart TD
 
 ```
 KrishiAI-360/
+│
+├── 🎨 assets/
+│   └── banner.svg                     # Animated yellow banner with moving silver stars
 │
 ├── 📱 krishideep_app/                 # Flutter mobile client (iOS / Android)
 ├── 🖥️ krisideepweb/                   # React.js farmer web dashboard
