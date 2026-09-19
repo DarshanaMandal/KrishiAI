@@ -1,27 +1,27 @@
 <div align="center">
 
-<!-- Hero Header with Warm Butter Yellow / Honey Gold Gradient -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=fef08a,fde047,facc15,eab308,f59e0b&height=220&section=header&text=KrishiAI%20360&fontSize=68&fontColor=422006&animation=fadeIn&subtext=Smart%20IoT%20Sensing%20%7C%20AI%20Crop%20Intelligence%20%7C%20Blockchain%20Agri-Market&subfontSize=18&subfontColor=713F12" width="100%" alt="KrishiAI 360 Header" />
+<!-- Hero Header with Pure Yellow / Lemon & Butter Yellow Gradient -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=fffde7,fff59d,ffee58,fdd835,fbc02d&height=220&section=header&text=KrishiAI%20360&fontSize=68&fontColor=212121&animation=fadeIn&subtext=Smart%20IoT%20Sensing%20%7C%20AI%20Crop%20Intelligence%20%7C%20Blockchain%20Agri-Market&subfontSize=18&subfontColor=424242" width="100%" alt="KrishiAI 360 Header" />
 
 <br/>
 
 ### 🌾 *Empowering Farmers Through Intelligent Data-Driven Agriculture.*
 
-[![Project](https://img.shields.io/badge/KrishiAI-360%20Ecosystem-FDE047?style=for-the-badge&logo=sprout&logoColor=422006&labelColor=713F12&color=FEF08A)](https://github.com/)
-[![Hackathon](https://img.shields.io/badge/🏆%20VITISH%202025-Theme%3A%20AgriTech%20%26%20FoodTech-FACC15?style=for-the-badge&labelColor=854D0E&color=FDE047)](https://vit.ac.in)
-[![License](https://img.shields.io/badge/License-MIT%20Open%20Source-FEF08A?style=for-the-badge&labelColor=78350F&color=FDE047)](LICENSE)
+[![Project](https://img.shields.io/badge/KrishiAI-360%20Ecosystem-FFEE58?style=for-the-badge&logo=sprout&logoColor=212121&labelColor=FDD835&color=FFF9C4)](https://github.com/DarshanaMandal/KrishiAI)
+[![Hackathon](https://img.shields.io/badge/🏆%20VITISH%202025-Theme%3A%20AgriTech%20%26%20FoodTech-FDD835?style=for-the-badge&labelColor=FBC02D&color=FFF59D)](https://vit.ac.in)
+[![License](https://img.shields.io/badge/License-MIT%20Open%20Source-FFF59D?style=for-the-badge&labelColor=FDD835&color=FFFDE7)](LICENSE)
 
 <br/>
 
-<!-- Tech Stack Badges in Butter Yellow & Golden Amber Palette -->
-[![React](https://img.shields.io/badge/React.js-Web%20Portal-FDE047?style=flat-square&logo=react&logoColor=422006&labelColor=854D0E)](https://react.dev/)
-[![Flutter](https://img.shields.io/badge/Flutter-Farmer%20App-FACC15?style=flat-square&logo=flutter&logoColor=422006&labelColor=713F12)](https://flutter.dev/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-ML%20Microservices-FEF08A?style=flat-square&logo=fastapi&logoColor=422006&labelColor=78350F)](https://fastapi.tiangolo.com/)
-[![Python](https://img.shields.io/badge/Python-3.9+-FDE047?style=flat-square&logo=python&logoColor=422006&labelColor=854D0E)](https://www.python.org/)
-[![TensorFlow](https://img.shields.io/badge/AI%2FML-TensorFlow%20%26%20XGBoost-FACC15?style=flat-square&logo=tensorflow&logoColor=422006&labelColor=713F12)](https://tensorflow.org/)
-[![MongoDB](https://img.shields.io/badge/Database-MongoDB-FEF08A?style=flat-square&logo=mongodb&logoColor=422006&labelColor=78350F)](https://mongodb.com/)
-[![Firebase](https://img.shields.io/badge/Cloud-Firebase-FDE047?style=flat-square&logo=firebase&logoColor=422006&labelColor=854D0E)](https://firebase.google.com/)
-[![ESP32](https://img.shields.io/badge/Hardware-ESP32%20%26%20IoT%20Sensors-FACC15?style=flat-square&logo=arduino&logoColor=422006&labelColor=713F12)]()
+<!-- Tech Stack Badges in Yellow Palette -->
+[![React](https://img.shields.io/badge/React.js-Web%20Portal-FFF59D?style=flat-square&logo=react&logoColor=212121&labelColor=FDD835)](https://react.dev/)
+[![Flutter](https://img.shields.io/badge/Flutter-Farmer%20App-FFEE58?style=flat-square&logo=flutter&logoColor=212121&labelColor=FBC02D)](https://flutter.dev/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-ML%20Microservices-FFF9C4?style=flat-square&logo=fastapi&logoColor=212121&labelColor=FDD835)](https://fastapi.tiangolo.com/)
+[![Python](https://img.shields.io/badge/Python-3.9+-FFEE58?style=flat-square&logo=python&logoColor=212121&labelColor=FBC02D)](https://www.python.org/)
+[![TensorFlow](https://img.shields.io/badge/AI%2FML-TensorFlow%20%26%20XGBoost-FDD835?style=flat-square&logo=tensorflow&logoColor=212121&labelColor=FBC02D)](https://tensorflow.org/)
+[![MongoDB](https://img.shields.io/badge/Database-MongoDB-FFF59D?style=flat-square&logo=mongodb&logoColor=212121&labelColor=FDD835)](https://mongodb.com/)
+[![Firebase](https://img.shields.io/badge/Cloud-Firebase-FFEE58?style=flat-square&logo=firebase&logoColor=212121&labelColor=FBC02D)](https://firebase.google.com/)
+[![ESP32](https://img.shields.io/badge/Hardware-ESP32%20%26%20IoT%20Sensors-FFF9C4?style=flat-square&logo=arduino&logoColor=212121&labelColor=FDD835)]()
 
 <br/>
 
@@ -31,8 +31,8 @@
   <a href="#-system-architecture">🏗️ Architecture</a> •
   <a href="#-key-features">✨ Features</a> •
   <a href="#-tech-stack">🛠️ Tech Stack</a> •
-  <a href="#-installation--setup">🚀 Quickstart</a> •
-  <a href="#-impact--benefits">📊 Impact</a>
+  <a href="#-quick-start--installation-guide">🚀 Quickstart</a> •
+  <a href="#-impact--farmer-economics">📊 Impact</a>
 </p>
 
 ---
@@ -41,24 +41,18 @@
 
 <br/>
 
-## 👥 Core Team & Lead Developers
+## 👥 Core Team
 
-<table align="center" width="100%">
-  <tr>
-    <td align="center" width="50%" style="background: #FFFDE7; border: 2px solid #FDE047; border-radius: 12px; padding: 16px;">
-      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80" width="120px" style="border-radius: 50%; border: 3px solid #EAB308;" alt="Darshana Mandal" /><br/><br/>
-      <b style="font-size: 18px; color: #713F12;">Darshana Mandal</b><br/>
-      <span style="color: #854D0E;">Lead Developer & AI/ML Engineer</span><br/><br/>
-      <a href="https://github.com/DarshanaMandal"><img src="https://img.shields.io/badge/GitHub-DarshanaMandal-FDE047?style=flat-square&logo=github&logoColor=422006&labelColor=78350F" /></a>
-    </td>
-    <td align="center" width="50%" style="background: #FFFDE7; border: 2px solid #FDE047; border-radius: 12px; padding: 16px;">
-      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80" width="120px" style="border-radius: 50%; border: 3px solid #EAB308;" alt="Shreyash Gautam" /><br/><br/>
-      <b style="font-size: 18px; color: #713F12;">Shreyash Gautam</b><br/>
-      <span style="color: #854D0E;">Lead Architect & Full-Stack / IoT Engineer</span><br/><br/>
-      <a href="https://github.com/shreyashgautam"><img src="https://img.shields.io/badge/GitHub-shreyashgautam-FACC15?style=flat-square&logo=github&logoColor=422006&labelColor=713F12" /></a>
-    </td>
-  </tr>
-</table>
+<div align="center">
+
+| Team Member | Role | GitHub Profile |
+|:---|:---|:---:|
+| 👩‍💻 **Darshana Mandal** | **Lead Developer & AI/ML Engineer** | [![GitHub](https://img.shields.io/badge/GitHub-DarshanaMandal-FFEE58?style=flat-square&logo=github&logoColor=212121&labelColor=FDD835)](https://github.com/DarshanaMandal) |
+| 👨‍💻 **Shreyash Gautam** | **Lead Architect & Full-Stack / IoT Engineer** | [![GitHub](https://img.shields.io/badge/GitHub-shreyashgautam-FFF59D?style=flat-square&logo=github&logoColor=212121&labelColor=FBC02D)](https://github.com/shreyashgautam) |
+
+</div>
+
+<br/>
 
 > 🌾 **"KrishiAI 360 was engineered to bridge the gap between traditional Indian farming and modern data science — combining ground IoT telemetry, neural crop diagnostics, and fair decentralized pricing."**
 
@@ -115,19 +109,19 @@ Traditional farming often relies on guesswork, uncalibrated fertilizer applicati
 
 ```mermaid
 flowchart TD
-    classDef yellow fill:#FEF08A,stroke:#CA8A04,stroke-width:2px,color:#713F12;
-    classDef gold fill:#FDE047,stroke:#A16207,stroke-width:2px,color:#422006;
-    classDef amber fill:#FACC15,stroke:#854D0E,stroke-width:2px,color:#422006;
-    classDef deepAmber fill:#EAB308,stroke:#713F12,stroke-width:2px,color:#422006;
+    classDef lemon fill:#FFFDE7,stroke:#FDD835,stroke-width:2px,color:#212121;
+    classDef butter fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#212121;
+    classDef yellow fill:#FFF59D,stroke:#F57F17,stroke-width:2px,color:#212121;
+    classDef gold fill:#FFEE58,stroke:#F9A825,stroke-width:2px,color:#212121;
 
     subgraph ClientLayer["📱 Multi-Platform Interface Layer"]
-        MobileApp["📲 Flutter Mobile App (Android/iOS)"]:::gold
-        WebPortal["🖥️ React.js Web Dashboard"]:::gold
-        VoiceAssistant["🎙️ Multilingual Voice Engine"]:::yellow
+        MobileApp["📲 Flutter Mobile App (Android/iOS)"]:::butter
+        WebPortal["🖥️ React.js Web Dashboard"]:::butter
+        VoiceAssistant["🎙️ Multilingual Voice Engine"]:::lemon
     end
 
     subgraph GatewayLayer["⚡ API Gateway & Microservices"]
-        FastAPI["🚀 FastAPI Microservices Engine"]:::amber
+        FastAPI["🚀 FastAPI Microservices Engine"]:::gold
     end
 
     subgraph IntelligenceLayer["🧠 AI / ML & IoT Processing"]
@@ -138,8 +132,8 @@ flowchart TD
     end
 
     subgraph TrustAndStorage["🗄️ Storage & Blockchain Verification"]
-        MongoDB[("🍃 MongoDB / Firebase")]:::deepAmber
-        Blockchain[("🔐 Immutable Blockchain Pricing Ledger")]:::deepAmber
+        MongoDB[("🍃 MongoDB / Firebase")]:::butter
+        Blockchain[("🔐 Immutable Blockchain Pricing Ledger")]:::butter
     end
 
     ClientLayer -->|RESTful APIs / WebSockets| FastAPI
@@ -226,8 +220,8 @@ KrishiAI-360/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/shreyashgautam/KrishiAI-360.git
-cd KrishiAI-360
+git clone https://github.com/DarshanaMandal/KrishiAI.git
+cd KrishiAI
 ```
 
 ---
@@ -334,10 +328,10 @@ Special thanks to **VIT Chennai (VITISH 2025)**, **ICAR agricultural datasets**,
 
 <br/>
 
-[![GitHub Stars](https://img.shields.io/badge/⭐%20Star%20Repository-KrishiAI--360-FDE047?style=for-the-badge&logo=github&logoColor=422006&labelColor=713F12)](https://github.com/shreyashgautam/KrishiAI-360)
+[![GitHub Stars](https://img.shields.io/badge/⭐%20Star%20Repository-KrishiAI--360-FFEE58?style=for-the-badge&logo=github&logoColor=212121&labelColor=FDD835)](https://github.com/DarshanaMandal/KrishiAI)
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=f59e0b,eab308,facc15,fde047,fef08a&height=120&section=footer" width="100%" alt="Footer Wave" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=fbc02d,fdd835,ffee58,fff59d,fffde7&height=120&section=footer" width="100%" alt="Footer Wave" />
 
 </div>
