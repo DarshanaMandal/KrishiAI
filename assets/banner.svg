@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="1200" height="280">
   <defs>
-    <!-- Warm Yellow Radial Glow — exactly like the Pinterest reference -->
+    <!-- Warm Yellow Radial Glow Background -->
     <radialGradient id="bgGlow" cx="50%" cy="45%" r="70%" fx="50%" fy="45%">
       <stop offset="0%"   stop-color="#FFE066" />
       <stop offset="30%"  stop-color="#FFD740" />
@@ -8,243 +8,226 @@
       <stop offset="85%"  stop-color="#FFF8CC" />
       <stop offset="100%" stop-color="#FFFDE7" />
     </radialGradient>
-
-    <!-- Secondary warm radial for depth -->
     <radialGradient id="innerGlow" cx="50%" cy="40%" r="40%">
       <stop offset="0%"   stop-color="#FFC400" stop-opacity="0.45"/>
       <stop offset="100%" stop-color="#FFE57A" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- 3D Chrome/Silver Star gradient — top-lit metallic look -->
-    <linearGradient id="starMetal1" x1="20%" y1="10%" x2="80%" y2="90%">
+    <!-- ═══ PUFFY CHROME BALLOON STAR — outer rim (dark steel edge) ═══ -->
+    <linearGradient id="starEdge" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%"   stop-color="#B0B8C2"/>
+      <stop offset="35%"  stop-color="#7A8894"/>
+      <stop offset="65%"  stop-color="#5C6B78"/>
+      <stop offset="100%" stop-color="#8898A6"/>
+    </linearGradient>
+
+    <!-- Inner face: radial white→silver highlight (upper-left hotspot = Pinterest look) -->
+    <radialGradient id="starFace1" cx="36%" cy="28%" r="68%" fx="30%" fy="22%">
       <stop offset="0%"   stop-color="#FFFFFF"/>
-      <stop offset="18%"  stop-color="#E8EDF2"/>
-      <stop offset="38%"  stop-color="#B0BEC5"/>
-      <stop offset="55%"  stop-color="#CFD8DC"/>
-      <stop offset="72%"  stop-color="#8D9BA8"/>
-      <stop offset="88%"  stop-color="#B0BEC5"/>
-      <stop offset="100%" stop-color="#ECEFF1"/>
-    </linearGradient>
-
-    <linearGradient id="starMetal2" x1="15%" y1="0%" x2="85%" y2="100%">
-      <stop offset="0%"   stop-color="#F5F5F5"/>
-      <stop offset="25%"  stop-color="#CFD8DC"/>
-      <stop offset="50%"  stop-color="#90A4AE"/>
-      <stop offset="75%"  stop-color="#B0BEC5"/>
-      <stop offset="100%" stop-color="#ECEFF1"/>
-    </linearGradient>
-
-    <linearGradient id="starMetal3" x1="30%" y1="5%" x2="70%" y2="95%">
+      <stop offset="10%"  stop-color="#F5F7FA"/>
+      <stop offset="22%"  stop-color="#E0E6EC"/>
+      <stop offset="40%"  stop-color="#C8D2DA"/>
+      <stop offset="60%"  stop-color="#B0BEC8"/>
+      <stop offset="80%"  stop-color="#96A8B6"/>
+      <stop offset="100%" stop-color="#7E94A4"/>
+    </radialGradient>
+    <radialGradient id="starFace2" cx="34%" cy="26%" r="64%" fx="28%" fy="20%">
       <stop offset="0%"   stop-color="#FFFFFF"/>
-      <stop offset="30%"  stop-color="#B0BEC5"/>
-      <stop offset="60%"  stop-color="#78909C"/>
-      <stop offset="100%" stop-color="#CFD8DC"/>
-    </linearGradient>
+      <stop offset="12%"  stop-color="#EEF3F7"/>
+      <stop offset="28%"  stop-color="#D6DDE5"/>
+      <stop offset="48%"  stop-color="#BDC8D2"/>
+      <stop offset="68%"  stop-color="#A2B0BC"/>
+      <stop offset="88%"  stop-color="#8A9CAA"/>
+      <stop offset="100%" stop-color="#728496"/>
+    </radialGradient>
+    <radialGradient id="starFace3" cx="40%" cy="30%" r="62%" fx="34%" fy="24%">
+      <stop offset="0%"   stop-color="#FFFFFF"/>
+      <stop offset="14%"  stop-color="#F0F4F7"/>
+      <stop offset="30%"  stop-color="#DAE0E7"/>
+      <stop offset="50%"  stop-color="#C0CAD3"/>
+      <stop offset="70%"  stop-color="#A6B4BE"/>
+      <stop offset="100%" stop-color="#8A9CAA"/>
+    </radialGradient>
 
-    <!-- Star drop shadows -->
-    <filter id="starShadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-color="#B8860B" flood-opacity="0.28"/>
+    <!-- Filters -->
+    <filter id="starShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="1.5" dy="2.5" stdDeviation="3" flood-color="#9A7210" flood-opacity="0.28"/>
     </filter>
-    <filter id="starShadowSm" x="-40%" y="-40%" width="180%" height="180%">
-      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#B8860B" flood-opacity="0.22"/>
+    <filter id="starShadowSm" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="1" dy="1.5" stdDeviation="1.8" flood-color="#9A7210" flood-opacity="0.22"/>
     </filter>
-    <filter id="starGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
+    <filter id="starGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-
-    <!-- Text glow -->
     <filter id="textGlow">
       <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#CA8A04" flood-opacity="0.4"/>
     </filter>
 
-    <!-- 5-point star path centred at 0,0 with outer radius R, inner ratio 0.4 -->
-    <!-- R=38: large star -->
-    <path id="star-lg" d="
-      M 0,-38
-      L 9.05,-12.4  L 36.1,-11.75
-      L 14.62,7.24  L 22.25,35.46
-      L 0,20        L -22.25,35.46
-      L -14.62,7.24 L -36.1,-11.75
-      L -9.05,-12.4 Z"/>
-
-    <!-- R=22: medium star -->
-    <path id="star-md" d="
-      M 0,-22
-      L 5.24,-7.18  L 20.9,-6.81
-      L 8.47,4.2    L 12.87,20.55
-      L 0,11.59     L -12.87,20.55
-      L -8.47,4.2   L -20.9,-6.81
-      L -5.24,-7.18 Z"/>
-
-    <!-- R=13: small star -->
-    <path id="star-sm" d="
-      M 0,-13
-      L 3.1,-4.24   L 12.36,-4.02
-      L 5,-2.49     L 7.61,12.14
-      L 0,6.85      L -7.61,12.14
-      L -5,-2.49    L -12.36,-4.02
-      L -3.1,-4.24 Z"/>
-
-    <!-- R=8: tiny star -->
-    <path id="star-xs" d="
-      M 0,-8
-      L 1.91,-2.61  L 7.61,-2.48
-      L 3.08,1.54   L 4.69,7.47
-      L 0,4.22      L -4.69,7.47
-      L -3.08,1.54  L -7.61,-2.48
-      L -1.91,-2.61 Z"/>
+    <!-- ═══ STAR SHAPES — smaller, precise 5-point ═══ -->
+    <!-- Large R=24 outer, R=18.7 inner face -->
+    <path id="star-lg"       d="M0,-24 L5.7,-7.85 L22.82,-7.42 L9.24,4.57 L14.05,22.42 L0,12.64 L-14.05,22.42 L-9.24,4.57 L-22.82,-7.42 L-5.7,-7.85Z"/>
+    <path id="star-lg-inner" d="M0,-18.7 L4.45,-6.12 L17.79,-5.79 L7.2,3.56 L10.96,17.49 L0,9.86 L-10.96,17.49 L-7.2,3.56 L-17.79,-5.79 L-4.45,-6.12Z"/>
+    <!-- Medium R=15 outer, R=11.7 inner face -->
+    <path id="star-md"       d="M0,-15 L3.57,-4.91 L14.27,-4.64 L5.77,2.86 L8.79,14 L0,7.9 L-8.79,14 L-5.77,2.86 L-14.27,-4.64 L-3.57,-4.91Z"/>
+    <path id="star-md-inner" d="M0,-11.7 L2.78,-3.83 L11.13,-3.62 L4.5,2.23 L6.85,10.92 L0,6.16 L-6.85,10.92 L-4.5,2.23 L-11.13,-3.62 L-2.78,-3.83Z"/>
+    <!-- Small R=9 outer, R=7 inner -->
+    <path id="star-sm"       d="M0,-9 L2.14,-2.94 L8.56,-2.79 L3.47,1.71 L5.27,8.4 L0,4.74 L-5.27,8.4 L-3.47,1.71 L-8.56,-2.79 L-2.14,-2.94Z"/>
+    <path id="star-sm-inner" d="M0,-7 L1.67,-2.29 L6.67,-2.17 L2.7,1.33 L4.11,6.54 L0,3.69 L-4.11,6.54 L-2.7,1.33 L-6.67,-2.17 L-1.67,-2.29Z"/>
+    <!-- Tiny R=5.5 -->
+    <path id="star-xs"       d="M0,-5.5 L1.31,-1.8 L5.23,-1.7 L2.12,1.04 L3.23,5.15 L0,2.9 L-3.23,5.15 L-2.12,1.04 L-5.23,-1.7 L-1.31,-1.8Z"/>
   </defs>
 
   <style>
-    /* ── Slow Drifting Animations ── */
     @keyframes drift1 {
-      0%   { transform: translate(0px,   0px)  rotate(0deg)   scale(1);    opacity:0.82; }
-      33%  { transform: translate(14px, -18px) rotate(14deg)  scale(1.08); opacity:1;    }
-      66%  { transform: translate(-8px,  10px) rotate(-8deg)  scale(0.95); opacity:0.75; }
-      100% { transform: translate(0px,   0px)  rotate(0deg)   scale(1);    opacity:0.82; }
+      0%   { transform: translate(0px,0px)   rotate(0deg)   scale(1);    opacity:0.88; }
+      33%  { transform: translate(14px,-18px) rotate(14deg)  scale(1.07); opacity:1;    }
+      66%  { transform: translate(-8px,10px)  rotate(-8deg)  scale(0.94); opacity:0.76; }
+      100% { transform: translate(0px,0px)   rotate(0deg)   scale(1);    opacity:0.88; }
     }
     @keyframes drift2 {
-      0%   { transform: translate(0px,   0px)  rotate(0deg)   scale(1);    opacity:0.65; }
-      40%  { transform: translate(-18px, 14px) rotate(-20deg) scale(1.12); opacity:0.95; }
-      75%  { transform: translate(10px, -8px)  rotate(10deg)  scale(0.9);  opacity:0.55; }
-      100% { transform: translate(0px,   0px)  rotate(0deg)   scale(1);    opacity:0.65; }
+      0%   { transform: translate(0px,0px)    rotate(0deg)   scale(1);    opacity:0.72; }
+      40%  { transform: translate(-18px,14px) rotate(-20deg) scale(1.1);  opacity:1;    }
+      75%  { transform: translate(10px,-8px)  rotate(10deg)  scale(0.9);  opacity:0.60; }
+      100% { transform: translate(0px,0px)    rotate(0deg)   scale(1);    opacity:0.72; }
     }
     @keyframes drift3 {
-      0%   { transform: translate(0px,  0px)  rotate(0deg)  scale(1);    opacity:0.7; }
-      50%  { transform: translate(20px, 12px) rotate(25deg) scale(1.15); opacity:1;   }
-      100% { transform: translate(0px,  0px)  rotate(0deg)  scale(1);    opacity:0.7; }
+      0%   { transform: translate(0px,0px)  rotate(0deg)  scale(1);    opacity:0.78; }
+      50%  { transform: translate(20px,12px) rotate(25deg) scale(1.12); opacity:1;    }
+      100% { transform: translate(0px,0px)  rotate(0deg)  scale(1);    opacity:0.78; }
     }
     @keyframes drift4 {
-      0%   { transform: translate(0px,   0px)  rotate(0deg)   scale(1);    opacity:0.55; }
-      45%  { transform: translate(-12px,-16px) rotate(-18deg) scale(1.1);  opacity:0.9;  }
-      100% { transform: translate(0px,   0px)  rotate(0deg)   scale(1);    opacity:0.55; }
+      0%   { transform: translate(0px,0px)    rotate(0deg)   scale(1);    opacity:0.65; }
+      45%  { transform: translate(-12px,-16px) rotate(-18deg) scale(1.08); opacity:0.95; }
+      100% { transform: translate(0px,0px)    rotate(0deg)   scale(1);    opacity:0.65; }
     }
     @keyframes drift5 {
-      0%   { transform: translate(0px, 0px)  rotate(0deg)  scale(1);    opacity:0.8; }
-      60%  { transform: translate(16px,-20px) rotate(30deg) scale(1.05); opacity:0.5; }
-      100% { transform: translate(0px, 0px)  rotate(0deg)  scale(1);    opacity:0.8; }
+      0%   { transform: translate(0px,0px)  rotate(0deg)  scale(1);    opacity:0.82; }
+      60%  { transform: translate(16px,-20px) rotate(30deg) scale(1.05); opacity:0.55; }
+      100% { transform: translate(0px,0px)  rotate(0deg)  scale(1);    opacity:0.82; }
     }
     @keyframes twinkle {
-      0%,100% { opacity:0.3; }
-      50%      { opacity:1;   }
+      0%,100% { opacity:0.35; }
+      50%     { opacity:1;    }
     }
-
-    .s1 { animation: drift1 9s  ease-in-out infinite; }
-    .s2 { animation: drift2 12s ease-in-out infinite; }
+    .s1 { animation: drift1 9s   ease-in-out infinite; }
+    .s2 { animation: drift2 12s  ease-in-out infinite; }
     .s3 { animation: drift3 7.5s ease-in-out infinite; }
-    .s4 { animation: drift4 10s ease-in-out infinite; }
+    .s4 { animation: drift4 10s  ease-in-out infinite; }
     .s5 { animation: drift5 8.5s ease-in-out infinite; }
-    .tw { animation: twinkle 3s ease-in-out infinite; }
-    .tw2{ animation: twinkle 4.5s ease-in-out infinite 1s; }
-    .tw3{ animation: twinkle 2.5s ease-in-out infinite 0.5s; }
-
+    .tw  { animation: twinkle 3s   ease-in-out infinite; }
+    .tw2 { animation: twinkle 4.5s ease-in-out infinite 1s; }
+    .tw3 { animation: twinkle 2.5s ease-in-out infinite 0.5s; }
     .title {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-weight: 900;
-      font-size: 72px;
-      letter-spacing: -1px;
-      fill: #3E2000;
+      font-weight: 900; font-size: 72px; letter-spacing: -1px; fill: #3E2000;
     }
     .sub {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-weight: 600;
-      font-size: 17px;
-      letter-spacing: 0.4px;
-      fill: #5D3A00;
+      font-weight: 600; font-size: 17px; letter-spacing: 0.4px; fill: #5D3A00;
     }
     .tag {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 1.8px;
-      fill: #7A4B00;
+      font-weight: 700; font-size: 12px; letter-spacing: 1.8px; fill: #7A4B00;
     }
   </style>
 
-  <!-- ── Background: soft yellow radial glow ── -->
-  <rect width="1200" height="280" rx="0" fill="url(#bgGlow)"/>
-  <rect width="1200" height="280" rx="0" fill="url(#innerGlow)"/>
+  <!-- Background -->
+  <rect width="1200" height="280" fill="url(#bgGlow)"/>
+  <rect width="1200" height="280" fill="url(#innerGlow)"/>
 
-  <!-- ── STARS — scattered behind the title ── -->
+  <!-- ═══════════════════════════════════════════════════════
+       STARS — puffy chrome balloon style (2-layer: edge + face)
+       Each star = outer dark-rim path + inner bright-face path + tiny specular dot
+       ═══════════════════════════════════════════════════════ -->
 
-  <!-- Large star — left cluster -->
-  <g class="s1" style="transform-origin: 120px 130px">
-    <use href="#star-lg" x="120" y="130" fill="url(#starMetal1)" filter="url(#starShadow)"/>
+  <!-- Large star — left centre -->
+  <g class="s1" style="transform-origin:120px 130px">
+    <use href="#star-lg"       x="120" y="130" fill="url(#starEdge)"  filter="url(#starShadow)"/>
+    <use href="#star-lg-inner" x="120" y="130" fill="url(#starFace1)"/>
+    <ellipse cx="109" cy="117" rx="5" ry="3.5" fill="white" opacity="0.75" transform="rotate(-30,109,117)"/>
   </g>
 
   <!-- Medium star — top left -->
-  <g class="s3" style="transform-origin: 70px 65px">
-    <use href="#star-md" x="70" y="65" fill="url(#starMetal2)" filter="url(#starShadowSm)"/>
+  <g class="s3" style="transform-origin:70px 65px">
+    <use href="#star-md"       x="70" y="65" fill="url(#starEdge)"  filter="url(#starShadowSm)"/>
+    <use href="#star-md-inner" x="70" y="65" fill="url(#starFace2)"/>
+    <ellipse cx="63" cy="57" rx="3.5" ry="2.3" fill="white" opacity="0.72" transform="rotate(-30,63,57)"/>
   </g>
 
   <!-- Small star — upper mid-left -->
-  <g class="s2" style="transform-origin: 240px 45px">
-    <use href="#star-sm" x="240" y="45" fill="url(#starMetal1)" filter="url(#starShadowSm)"/>
+  <g class="s2" style="transform-origin:240px 45px">
+    <use href="#star-sm"       x="240" y="45" fill="url(#starEdge)"  filter="url(#starShadowSm)"/>
+    <use href="#star-sm-inner" x="240" y="45" fill="url(#starFace1)"/>
+    <ellipse cx="235" cy="39" rx="2.2" ry="1.5" fill="white" opacity="0.70" transform="rotate(-30,235,39)"/>
   </g>
 
-  <!-- Large star — right side -->
-  <g class="s4" style="transform-origin: 1070px 110px">
-    <use href="#star-lg" x="1070" y="110" fill="url(#starMetal2)" filter="url(#starShadow)"/>
+  <!-- Large star — right centre -->
+  <g class="s4" style="transform-origin:1070px 110px">
+    <use href="#star-lg"       x="1070" y="110" fill="url(#starEdge)"  filter="url(#starShadow)"/>
+    <use href="#star-lg-inner" x="1070" y="110" fill="url(#starFace2)"/>
+    <ellipse cx="1059" cy="97" rx="5" ry="3.5" fill="white" opacity="0.75" transform="rotate(-30,1059,97)"/>
   </g>
 
   <!-- Medium star — top right -->
-  <g class="s5" style="transform-origin: 1120px 55px">
-    <use href="#star-md" x="1120" y="55" fill="url(#starMetal1)" filter="url(#starShadowSm)"/>
+  <g class="s5" style="transform-origin:1120px 55px">
+    <use href="#star-md"       x="1120" y="55" fill="url(#starEdge)"  filter="url(#starShadowSm)"/>
+    <use href="#star-md-inner" x="1120" y="55" fill="url(#starFace3)"/>
+    <ellipse cx="1113" cy="47" rx="3.5" ry="2.3" fill="white" opacity="0.72" transform="rotate(-30,1113,47)"/>
   </g>
 
   <!-- Small star — bottom left -->
-  <g class="s1" style="transform-origin: 190px 230px">
-    <use href="#star-sm" x="190" y="230" fill="url(#starMetal3)" filter="url(#starShadowSm)"/>
+  <g class="s1" style="transform-origin:190px 230px">
+    <use href="#star-sm"       x="190" y="230" fill="url(#starEdge)"  filter="url(#starShadowSm)"/>
+    <use href="#star-sm-inner" x="190" y="230" fill="url(#starFace3)"/>
+    <ellipse cx="185" cy="224" rx="2.2" ry="1.5" fill="white" opacity="0.68" transform="rotate(-30,185,224)"/>
   </g>
 
   <!-- Small star — bottom right -->
-  <g class="s2" style="transform-origin: 1010px 220px">
-    <use href="#star-sm" x="1010" y="220" fill="url(#starMetal2)" filter="url(#starShadowSm)"/>
+  <g class="s2" style="transform-origin:1010px 220px">
+    <use href="#star-sm"       x="1010" y="220" fill="url(#starEdge)"  filter="url(#starShadowSm)"/>
+    <use href="#star-sm-inner" x="1010" y="220" fill="url(#starFace1)"/>
+    <ellipse cx="1005" cy="214" rx="2.2" ry="1.5" fill="white" opacity="0.68" transform="rotate(-30,1005,214)"/>
   </g>
 
   <!-- Medium star — lower left -->
-  <g class="s3" style="transform-origin: 55px 210px">
-    <use href="#star-md" x="55" y="210" fill="url(#starMetal3)" filter="url(#starShadowSm)"/>
+  <g class="s3" style="transform-origin:55px 210px">
+    <use href="#star-md"       x="55" y="210" fill="url(#starEdge)"  filter="url(#starShadowSm)"/>
+    <use href="#star-md-inner" x="55" y="210" fill="url(#starFace3)"/>
+    <ellipse cx="48" cy="202" rx="3.5" ry="2.3" fill="white" opacity="0.70" transform="rotate(-30,48,202)"/>
   </g>
 
   <!-- Medium star — lower right -->
-  <g class="s4" style="transform-origin: 1150px 190px">
-    <use href="#star-md" x="1150" y="190" fill="url(#starMetal1)" filter="url(#starShadowSm)"/>
+  <g class="s4" style="transform-origin:1150px 190px">
+    <use href="#star-md"       x="1150" y="190" fill="url(#starEdge)"  filter="url(#starShadowSm)"/>
+    <use href="#star-md-inner" x="1150" y="190" fill="url(#starFace1)"/>
+    <ellipse cx="1143" cy="182" rx="3.5" ry="2.3" fill="white" opacity="0.70" transform="rotate(-30,1143,182)"/>
   </g>
 
-  <!-- Tiny accent stars — scattered -->
-  <g class="tw" style="transform-origin: 380px 35px">
-    <use href="#star-xs" x="380" y="35" fill="url(#starMetal2)" filter="url(#starGlow)"/>
+  <!-- Tiny twinkling accent stars -->
+  <g class="tw"  style="transform-origin:380px 35px">
+    <use href="#star-xs" x="380" y="35"  fill="url(#starFace1)" filter="url(#starGlow)"/>
   </g>
-  <g class="tw2" style="transform-origin: 850px 40px">
-    <use href="#star-xs" x="850" y="40" fill="url(#starMetal1)" filter="url(#starGlow)"/>
+  <g class="tw2" style="transform-origin:850px 40px">
+    <use href="#star-xs" x="850" y="40"  fill="url(#starFace2)" filter="url(#starGlow)"/>
   </g>
-  <g class="tw3" style="transform-origin: 310px 240px">
-    <use href="#star-xs" x="310" y="240" fill="url(#starMetal3)" filter="url(#starGlow)"/>
+  <g class="tw3" style="transform-origin:310px 240px">
+    <use href="#star-xs" x="310" y="240" fill="url(#starFace3)" filter="url(#starGlow)"/>
   </g>
-  <g class="tw" style="transform-origin: 920px 250px">
-    <use href="#star-xs" x="920" y="250" fill="url(#starMetal2)" filter="url(#starGlow)"/>
+  <g class="tw"  style="transform-origin:920px 250px">
+    <use href="#star-xs" x="920" y="250" fill="url(#starFace1)" filter="url(#starGlow)"/>
   </g>
-  <g class="tw2" style="transform-origin: 600px 30px">
-    <use href="#star-xs" x="600" y="30" fill="url(#starMetal1)" filter="url(#starGlow)"/>
+  <g class="tw2" style="transform-origin:600px 30px">
+    <use href="#star-xs" x="600" y="30"  fill="url(#starFace2)" filter="url(#starGlow)"/>
   </g>
-  <g class="tw3" style="transform-origin: 600px 255px">
-    <use href="#star-xs" x="600" y="255" fill="url(#starMetal2)" filter="url(#starGlow)"/>
+  <g class="tw3" style="transform-origin:600px 255px">
+    <use href="#star-xs" x="600" y="255" fill="url(#starFace3)" filter="url(#starGlow)"/>
   </g>
 
-  <!-- ── FOREGROUND TEXT ── -->
-
-  <!-- Pill label -->
+  <!-- ═══ FOREGROUND TEXT ═══ -->
   <rect x="430" y="52" width="340" height="26" rx="13" fill="#FFFDE7" fill-opacity="0.8" stroke="#DEB018" stroke-width="1.2"/>
-  <text x="600" y="70" text-anchor="middle" class="tag">✦ SMART PRECISION AGRI-TECH ✦</text>
-
-  <!-- Main Title -->
+  <text x="600" y="70"  text-anchor="middle" class="tag">✦ SMART PRECISION AGRI-TECH ✦</text>
   <text x="600" y="156" text-anchor="middle" class="title" filter="url(#textGlow)">KrishiAI 360</text>
-
-  <!-- Subtitle -->
   <text x="600" y="196" text-anchor="middle" class="sub">🌾 Smart IoT Sensing · 🧪 AI Crop Intelligence · 🔗 Blockchain Agri-Market</text>
-
-  <!-- Underline accent -->
   <rect x="410" y="214" width="380" height="2.5" rx="1.25" fill="#CA8A04" opacity="0.55"/>
 </svg>
